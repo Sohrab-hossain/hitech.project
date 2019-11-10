@@ -21,6 +21,10 @@
     <!-- Lineawesome CSS -->
     <link rel="stylesheet" href="{{asset('assets/backend/css/line-awesome.min.css')}}">
 
+    <!-- For Extra CSS -->
+    @stack('css')
+    <!-- End Extra CSS -->
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{asset('assets/backend/css/style.css')}}">
 
@@ -29,6 +33,7 @@
         {{--<script src="{{asset('assets/backend/js/html5shiv.min.js')}}"></script>
         <script src="{{asset('assets/backend/js/respond.min.js')}}"></script>--}}
     <!--[endif]-->
+
 </head>
 <body>
 <!-- Main Wrapper -->
@@ -70,8 +75,13 @@
 <!-- Slimscroll JS -->
 <script src="{{asset('assets/backend/js/jquery.slimscroll.min.js')}}"></script>
 
+<!-- For Extra Script -->
+@stack('scripts')
+<!-- End Extra Script -->
+
 <!-- Custom JS -->
 <script src="{{asset('assets/backend/js/app.js')}}"></script>
+
 
 </body>
 </html>

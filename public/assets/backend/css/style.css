@@ -1548,10 +1548,10 @@ table.dataTable thead > tr > td.sorting {
 	transition: all 0.2s ease-in-out;
 }
 .page-wrapper > .content {
-	padding: 30px;
+	padding: 15px;
 }
 .page-header {
-	margin-bottom: 1.875rem;
+	margin-bottom: 1rem;
 }
 .page-header .breadcrumb {
     background-color: transparent;
@@ -1577,6 +1577,7 @@ table.dataTable thead > tr > td.sorting {
 }
 .card-header {
     background-color: #fff;
+    border-bottom: none;
 }
 .card-footer {
     background-color: #fff;
@@ -1732,7 +1733,7 @@ table.dataTable thead > tr > td.sorting {
 .card-table .card-header {
 	background-color: #fff;
 	border-bottom: 1px solid #ddd;
-	padding: 15px;
+	padding: 10px;
 }
 .card-table .card-body {
 	padding: 0;
