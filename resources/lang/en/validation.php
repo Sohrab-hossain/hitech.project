@@ -133,6 +133,11 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+
+       /* 'custom' => [
+            'name' => [
+                'required' => 'You must fill the field',
+            ],*/
     ],
 
     /*

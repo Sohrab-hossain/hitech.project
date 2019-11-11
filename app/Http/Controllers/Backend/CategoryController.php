@@ -42,6 +42,15 @@ class CategoryController extends Controller
         //dd($request->all());
 
         //verification
+        $this->validate($request, [
+            'name'  => 'required',
+            'image'  => 'nullable|image',
+        ],
+            [
+                'name.required'  => 'Please provide a category name',
+                'image.image'  => 'Please provide a valid image with .jpg, .png, .gif, .jpeg exrension..',
+            ]);
+
 
 
 
@@ -71,6 +80,8 @@ class CategoryController extends Controller
         return redirect()->route('admin.category.index');
 
     }
+
+
 
     /**
      * Display the specified resource.
