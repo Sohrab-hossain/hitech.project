@@ -85,16 +85,27 @@
 
                                 </td>
                                 <td>
-                                    {{--<a href="#" class=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a> |
-
-                                    <a href="#" class=""><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>--}}
-                                    <a class="btn btn-primary" href="{{route('admin.category.edit',$category->id)}}" aria-label="Edit" title="Edit">
+                                    {{--<a class="btn btn-primary" href="{{route('admin.category.edit',$category->id)}}" aria-label="Edit" title="Edit">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    </a>
-
-                                    <a class="btn btn-danger" href="#" aria-label="Delete" title="Delete">
+                                    </a>--}}
+                                    {{--<a class="btn btn-danger" href="{{ route('admin.category.delete',$category->id) }}" aria-label="Delete"
+                                       title="Delete"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('delete-form').submit();">
                                         <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                    </a>
+                                    </a>--}}
+
+                                    <form id="delete-form" action="{{ route('admin.category.delete',$category->id) }}" method="POST" onsubmit="return checkDelete(); ">
+                                        <a class="btn btn-primary" href="{{route('admin.category.edit',$category->id)}}" aria-label="Edit" title="Edit">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        </a>
+
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+                                    </form>
+
                                 </td>
 
                             </tr>
@@ -125,4 +136,28 @@
     <!-- Datatable JS -->
     <script src="{{asset('assets/backend/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('assets/backend/js/dataTables.bootstrap4.min.js')}}"></script>
+    <!--JS Delete Alert Message -->
+    <script type="text/javascript">
+        function checkDelete(){
+            chk = confirm(" Are you sure to delete this ?");
+
+            if(chk)
+            {
+                finalCheck = confirm("This data deleted permanently. So are you sure to delete this ?");
+                if(finalCheck)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+    </script>
 @endpush

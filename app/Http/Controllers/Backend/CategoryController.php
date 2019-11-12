@@ -174,7 +174,18 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // database Delete
+        $category = Category::find($id);
+
+        if ($category->image) {
+            Storage::delete('public/'.$category->image);
+        }
+
+        $category->delete();
+
+        // redirect
+        session()->flash('message','Category Deleted Successfully!');
+        return redirect()->route('admin.category.index');
     }
 
 
