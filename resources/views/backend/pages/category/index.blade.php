@@ -56,6 +56,7 @@
                                 <th>SI</th>
                                 <th>Name</th>
                                 <th>Description</th>
+                                <th>Image</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -67,10 +68,27 @@
                                 <td>{{$category->name}}</td>
                                 <td>{{$category->description}}</td>
                                 <td>
+                                    @if ($category->image)
+                                        <img src="{{ asset('storage/'.$category->image) }}" alt="img" style="width: 50px; height: 50px">
+                                    @else
+                                        <img src="{{ asset('#') }}" style="width: 50px; height: 50px" >
+                                    @endif
+
+                                    {{--@if ($category->image)
+                                       <img src="{{ asset('assets/backend/uploads/categories/'.$category->image) }}" alt="img" style="width: 50px; height: 50px">
+                                    @else
+                                       <img src="{{ asset('dist/img/default-150x150.png') }}" style="width: 50px; height: 50px" >
+                                    @endif--}}
+
+
+
+
+                                </td>
+                                <td>
                                     {{--<a href="#" class=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a> |
 
                                     <a href="#" class=""><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>--}}
-                                    <a class="btn btn-primary" href="#" aria-label="Edit" title="Edit">
+                                    <a class="btn btn-primary" href="{{route('admin.category.edit',$category->id)}}" aria-label="Edit" title="Edit">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                     </a>
 

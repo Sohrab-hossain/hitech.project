@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+
 class CategoryController extends Controller
 {
     /**
@@ -44,7 +47,7 @@ class CategoryController extends Controller
         //verification
         $this->validate($request, [
             'name'  => 'required',
-            'image'  => 'nullable|image',
+            'image'  => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ],
             [
                 'name.required'  => 'Please provide a category name',
@@ -62,21 +65,23 @@ class CategoryController extends Controller
         //insert images also
 
         if ($request->image > 0) {
-            $image = $request->file('image');
+            /*$image = $request->file('image');
             $img = time() . '.'. $image->getClientOriginalExtension();
-            $location = 'assets/backend/uploads/categories/';
-            //$location = 'public/backend/uploads/categories/' .$img;
+            $location = 'storage/uploads/categories/';
+            //$location = 'storage/uploads/categories/' .$img;
             //Image::make($image)->save($location);
             //dd($location);
             $image->move($location, $img);
-            $category->image = $img;
+            $category->image = $img;*/
+
+            $category->image = $request->image->store('uploads/categories','public');
         }
 
 
         $category->save();
 
         // redirect
-        session()->flash('message','Member Saved Successfully!');
+        session()->flash('message','Category Insert Successfully!');
         return redirect()->route('admin.category.index');
 
     }
@@ -102,7 +107,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category= Category::find($id);
+        return view('backend.pages.category.edit',compact('category'));
     }
 
     /**
@@ -114,7 +120,50 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //verification
+        $this->validate($request, [
+            'name'  => 'required',
+            'image'  => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ],
+            [
+                'name.required'  => 'Please provide a category name',
+                'image.image'  => 'Please provide a valid image with .jpg, .png, .gif, .jpeg exrension..',
+            ]);
+
+
+
+
+        // database create / save
+        $category = Category::find($id);
+        $category->name = $request->name;
+        $category->description = $request->description;
+
+        //insert images also
+
+        if ($request->image > 0) {
+            //Delete the old image from folder
+
+           /* if (File::exists($category->image)) {
+                File::delete('public\\'.$category->image);
+            }*/
+
+            if ($category->image) {
+                Storage::delete('public/'.$category->image);
+            }
+
+            $category->image = $request->image->store('uploads/categories','public');
+        }
+
+
+        $category->update();
+
+        // redirect
+        session()->flash('message','Category Update Successfully!');
+        return redirect()->route('admin.category.index');
+
+
+
+
     }
 
     /**

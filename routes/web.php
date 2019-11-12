@@ -26,8 +26,8 @@ Route::group(['prefix' => 'admin'], function (){
     Route::get('/category/create', 'Backend\CategoryController@create')->name('admin.category.create');
     Route::post('/category/store', 'Backend\CategoryController@store')->name('admin.category.store');
 
-    Route::get('/category/edit/{id}', 'Backend\CategoryController@store')->name('admin.category.edit');
-    Route::post('/category/edit/{id}', 'Backend\CategoryController@store')->name('admin.category.update');
+    Route::get('/category/edit/{id}', 'Backend\CategoryController@edit')->name('admin.category.edit');
+    Route::post('/category/edit/{id}', 'Backend\CategoryController@update')->name('admin.category.update');
     Route::post('/category/delete/{id}','InstallmentController@deleteInstallment')->name('admin.category.delete');
 
 
