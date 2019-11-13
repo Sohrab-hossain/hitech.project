@@ -54,7 +54,7 @@
 
                         </div>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary" onClick="validateFm();">Submit</button>
+                            <button type="submit" class="btn btn-primary" onClick="validateFn();">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -86,7 +86,7 @@
     <!--For JS Validation -->
     <script src="{{asset('assets/backend/plugins/validate_jquery/jquery.validate.js')}}"></script>
     <script type="text/javascript">
-        function validateFm(){
+        function validateFn(){
             $(".passenger-validation").validate({
                 rules: {
                     // simple rule, converted to {required:true}

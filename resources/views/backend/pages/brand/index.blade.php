@@ -1,14 +1,14 @@
 @extends('backend.layouts.master')
-@section('title', 'Category')
+@section('title', 'Brand')
 @section('content')
     <!-- Page Header -->
     <div class="page-header">
         <div class="row">
             <div class="col">
-                <h3 class="page-title">Category</h3>
+                <h3 class="page-title">Brand</h3>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Category Tables</li>
+                    <li class="breadcrumb-item active">Brand Tables</li>
                 </ul>
             </div>
         </div>
@@ -29,11 +29,11 @@
         <div class="col-sm-12">
             <div class="card mb-0">
                 <div class="card-header">
-                    <h4 class="card-title mb-0 pull-left">All Category Datatable</h4>
+                    <h4 class="card-title mb-0 pull-left">All Brand Datatable</h4>
 
                     <div class="btn-group pull-right">
                         <div class="mr-1">
-                            <a href="{{route('admin.category.create')}}" class="btn btn-primary">Add New Category</a>
+                            <a href="{{route('admin.brand.create')}}" class="btn btn-primary">Add New Brand</a>
                         </div>
 
                         <button type="button" class="btn btn-primary dropdown-toggle ml-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</button>
@@ -56,64 +56,36 @@
                                 <th>SI</th>
                                 <th>Name</th>
                                 <th>Description</th>
-                                <th>Image</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ($categories as $key=>$category)
-                                <tr>
-                                    <td>{{$key + 1}}</td>
-                                    {{--<td>{{$category->id}}</td>--}}
-                                    <td>{{$category->name}}</td>
-                                    <td>{{$category->description}}</td>
-                                    <td>
-                                        @if ($category->image)
-                                            <img src="{{ asset('storage/'.$category->image) }}" alt="img" style="width: 50px; height: 50px">
-                                        @else
-                                            <img src="{{ asset('#') }}" style="width: 50px; height: 50px" >
-                                        @endif
-
-                                        {{--@if ($category->image)
-                                           <img src="{{ asset('assets/backend/uploads/categories/'.$category->image) }}" alt="img" style="width: 50px; height: 50px">
-                                        @else
-                                           <img src="{{ asset('dist/img/default-150x150.png') }}" style="width: 50px; height: 50px" >
-                                        @endif--}}
-
-
-
-
-                                    </td>
-                                    <td>
-                                        {{--<a class="btn btn-primary" href="{{route('admin.category.edit',$category->id)}}" aria-label="Edit" title="Edit">
+                            @foreach ($brands as $key=>$brand)
+                            <tr>
+                                <td>{{$key + 1}}</td>
+                                {{--<td>{{$category->id}}</td>--}}
+                                <td>{{$brand->name}}</td>
+                                <td>{{$brand->description}}</td>
+                                <td>
+                                    <form id="delete-form" action="{{ route('admin.brand.delete',$brand->id) }}" method="POST" onsubmit="return checkDelete(); ">
+                                        <a class="btn btn-primary" href="{{route('admin.brand.edit',$brand->id)}}" aria-label="Edit" title="Edit">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        </a>--}}
-                                        {{--<a class="btn btn-danger" href="{{ route('admin.category.delete',$category->id) }}" aria-label="Delete"
-                                           title="Delete"
-                                           onclick="event.preventDefault();
-                                                         document.getElementById('delete-form').submit();">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        </a>--}}
+                                        </a>
 
-                                        <form id="delete-form" action="{{ route('admin.category.delete',$category->id) }}" method="POST" onsubmit="return checkDelete(); ">
-                                            <a class="btn btn-primary" href="{{route('admin.category.edit',$category->id)}}" aria-label="Edit" title="Edit">
-                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            </a>
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i></button>
 
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                    </form>
 
-                                        </form>
+                                </td>
 
-                                    </td>
-
-                                </tr>
+                            </tr>
                             @endforeach
                             </tbody>
                         </table>
                         <div class="pull-right">
-                            {{ $categories -> links() }}
+                            {{ $brands -> links() }}
                         </div>
                     </div>
                 </div>

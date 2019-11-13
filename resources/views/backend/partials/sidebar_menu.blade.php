@@ -8,29 +8,20 @@
                 <li class="submenu">
                     <a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a href="index.html">Admin Dashboard</a></li>
-                        <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+                        <li><a href="{{route('admin.index')}}">Admin Dashboard</a></li>
+                        <li><a href="#">Employee Dashboard</a></li>
                     </ul>
                 </li>
-                <li class="submenu">
-                    <a href="#"><i class="la la-cube"></i> <span> Apps</span> <span class="menu-arrow"></span></a>
-                    <ul style="display: none;">
-                        <li><a href="chat.html">Chat</a></li>
-                        <li class="submenu">
-                            <a href="#"><span> Calls</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="voice-call.html">Voice Call</a></li>
-                                <li><a href="video-call.html">Video Call</a></li>
-                                <li><a href="outgoing-call.html">Outgoing Call</a></li>
-                                <li><a href="incoming-call.html">Incoming Call</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="events.html">Calendar</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="inbox.html">Email</a></li>
-                        <li><a href="file-manager.html">File Manager</a></li>
-                    </ul>
+
+                <li>
+                    <a href="{{route('admin.category.index')}}"><i class="la la-rss-square"></i> <span>Category</span></a>
                 </li>
+                <li>
+                    <a href="{{route('admin.brand.index')}}"><i class="la la-codepen"></i> <span>Brand</span></a>
+                </li>
+
+
+
                 <li class="menu-title">
                     <span>Employees</span>
                 </li>
@@ -50,9 +41,7 @@
                         <li><a href="overtime.html">Overtime</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="clients.html"><i class="la la-users"></i> <span>Clients</span></a>
-                </li>
+
                 <li class="submenu">
                     <a href="#"><i class="la la-rocket"></i> <span> Projects</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">

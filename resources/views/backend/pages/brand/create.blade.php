@@ -1,15 +1,15 @@
 @extends('backend.layouts.master')
-@section('title', 'Edit Category')
+@section('title', 'Add Brand')
 @section('content')
     <!-- Page Header -->
     <div class="page-header">
         <div class="row">
             <div class="col">
-                <h3 class="page-title">Edit Category</h3>
+                <h3 class="page-title">Add Brand</h3>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="#">Category</a></li>
-                    <li class="breadcrumb-item active">Edit Category</li>
+                    <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('admin.brand.index')}}">Brand</a></li>
+                    <li class="breadcrumb-item active">Add Brand</li>
                 </ul>
             </div>
         </div>
@@ -19,39 +19,31 @@
         <div class="col-xl-8 offset-2">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title mb-0">Edit Category</h4>
+                    <h4 class="card-title mb-0">Add Brand</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('admin.category.update', $category->id) }}" method="post" enctype="multipart/form-data" class="passenger-validation" name="passenger-validation">
+                    <form action="{{ route('admin.brand.store') }}" method="post" enctype="multipart/form-data" class="passenger-validation" name="passenger-validation">
                         @csrf
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label">Category Name</label>
+                                    <label class="col-lg-3 col-form-label">Brand Name</label>
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" value="{{ $category->name }}" required>
+                                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" value="{{old('name')}}" required>
                                         @error('name')
                                         <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label">Category Description</label>
+                                    <label class="col-lg-3 col-form-label">Brand Description</label>
                                     <div class="col-lg-9">
-                                        <textarea type="text" class="form-control" name="description" id="description">{{ $category->description }}</textarea>
+                                        <textarea type="text" class="form-control" name="description" id="description">{{old('description')}}</textarea>
 
                                     </div>
 
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label">Category Image</label>
-                                    <div class="col-lg-9">
-                                        <input type="file" class="form-control" name="image" id="image">
-                                    </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="text-right">
                             <button type="submit" class="btn btn-primary" onClick="validateFn();">Submit</button>
@@ -92,27 +84,16 @@
                     // simple rule, converted to {required:true}
                     name: {
                         required: true,
-                        minlength: 2
+                        minlength: 2,
+                        maxlength: 70
                     },
-                    /*password: {
-                        required: true,
-                        minlength: 5
-                    },
-                    // compound rule
-                    email: {
-                        required: true,
-                        email: true
-                    }*/
                 },
                 messages: {
                     name: {
-                        required: "Please enter a Category Name",
-                        minlength: "Your username must consist of at least 2 characters"
+                        required: "Please enter a Brand Name",
+                        minlength: "Your Brand Name must consist of at least 2 characters",
+                        maxlength: "Your Brand Name must consist under 70 characters"
                     },
-                    /* password: {
-                         required: "Please provide a password",
-                         minlength: "Your password must be at least 5 characters long"
-                     }*/
 
                 }
             });
