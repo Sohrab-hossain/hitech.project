@@ -31,6 +31,15 @@ Route::group(['prefix' => 'admin'], function (){
         Route::post('/edit/{id}', 'Backend\CategoryController@update')->name('admin.category.update');
         Route::delete('/delete/{id}','Backend\CategoryController@destroy')->name('admin.category.delete');
     });
+    Route::group(['prefix' => 'sub_category'],function (){
+        Route::get('/', 'Backend\Sub_categoryCntrller@index')->name('admin.sub_category.index');
+        Route::get('/create', 'Backend\Sub_categoryCntrller@create')->name('admin.sub_category.create');
+        Route::post('/store', 'Backend\Sub_categoryCntrller@store')->name('admin.sub_category.store');
+
+        Route::get('/edit/{id}', 'Backend\Sub_categoryCntrller@edit')->name('admin.sub_category.edit');
+        Route::post('/edit/{id}', 'Backend\Sub_categoryCntrller@update')->name('admin.sub_category.update');
+        Route::delete('/delete/{id}','Backend\Sub_categoryCntrller@destroy')->name('admin.sub_category.delete');
+    });
 
     Route::group(['prefix' => 'brand'],function (){
         Route::get('/', 'Backend\BrandController@index')->name('admin.brand.index');

@@ -17,6 +17,9 @@
                     <a href="{{route('admin.category.index')}}"><i class="la la-rss-square"></i> <span>Category</span></a>
                 </li>
                 <li>
+                    <a href="{{route('admin.sub_category.index')}}"><i class="la la-rss-square"></i> <span>Sub Category</span></a>
+                </li>
+                <li>
                     <a href="{{route('admin.brand.index')}}"><i class="la la-codepen"></i> <span>Brand</span></a>
                 </li>
 
