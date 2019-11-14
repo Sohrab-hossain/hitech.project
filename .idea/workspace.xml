@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67377ab5-582f-4a36-9952-ad3981f3d61c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/pages/sub_category/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/pages/sub_category/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/pages/sub_category/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/pages/product/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/pages/product/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/pages/product/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/pages/product/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9e8aa54f-9a59-4605-a9ff-6fbfe7341abf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9e8aa54f-9a59-4605-a9ff-6fbfe7341abf.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_10_084914_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_10_084914_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_13_073333_create_brands_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_13_073333_create_brands_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/backend/css/line-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/backend/css/line-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/backend/fonts/line-awesome.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/backend/fonts/line-awesome.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/backend/fonts/line-awesome.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/backend/fonts/line-awesome.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/backend/fonts/line-awesome.woff2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/sidebar_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/sidebar_menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -52,54 +58,36 @@
         <item name="hitech.project@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="hitech.project: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="categories: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="products: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="34" column="87" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="87" />
+            <state relative-caret-position="428">
+              <caret line="54" column="93" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="93" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Sub_category.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/product/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="107">
+              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/sub_category/edit.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="31" column="161" selection-start-line="31" selection-start-column="161" selection-end-line="31" selection-end-column="161" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/sub_category/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="132" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Sub_categoryCntrller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="190" column="44" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
+            <state relative-caret-position="152">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="23" />
               <folding>
                 <element signature="e#48#84#0#PHP" expanded="true" />
               </folding>
@@ -107,11 +95,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/sub_category/index.blade.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/product/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="374">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="e#122#609#0#HTML" />
+                <element signature="e#1172#1516#0#HTML" />
+                <element signature="e#1474#1815#0#HTML" />
+                <element signature="e#1848#2195#0#HTML" />
+                <element signature="e#2228#2583#0#HTML" />
+                <element signature="e#5155#5508#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/sub_category/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="48" column="49" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="48" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -166,12 +171,18 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_11_10_084914_create_categories_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_11_13_180830_create_sub_categories_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Sub_category.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/partials/sidebar_menu.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/pages/sub_category/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/pages/sub_category/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/pages/sub_category/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Sub_categoryCntrller.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_11_14_072159_create_product_images_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_11_14_071207_create_products_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/partials/sidebar_menu.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Product.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/pages/product/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/pages/product/create.blade.php" />
       </list>
     </option>
   </component>
@@ -346,6 +357,15 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hitech.project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hitech.project" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="sub_category" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -366,11 +386,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\hitech.project\resources\views\backend\pages\product" />
       <recent name="C:\laragon\www\hitech.project\resources\views\backend\pages\sub_category" />
       <recent name="C:\laragon\www\hitech.project\resources\views\backend\pages\brand" />
       <recent name="C:\laragon\www\hitech.project\public\storage\uploads\categories" />
       <recent name="C:\laragon\www\hitech.project\storage\app\public\uploads\categories" />
-      <recent name="C:\laragon\www\hitech.project\public\assets\backend\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -408,18 +428,19 @@
       <workItem from="1573556318718" duration="8029000" />
       <workItem from="1573575376294" duration="621000" />
       <workItem from="1573618897330" duration="8258000" />
-      <workItem from="1573667938977" duration="7329000" />
+      <workItem from="1573667938977" duration="7652000" />
+      <workItem from="1573715455374" duration="18960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95389000" />
+    <option name="totallyTimeSpent" value="114672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23298033" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27609682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -434,13 +455,13 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="AWS Tail" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32843137" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.30228758" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="3" weight="0.20272315" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17246597" />
@@ -471,42 +492,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="77" lean-forward="true" selection-start-column="77" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/backend/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="47" lean-forward="true" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/backend/css/bootstrap-datetimepicker.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/backend/css/dataTables.bootstrap4.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/backend/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/backend/css/select2.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/backend/css/style00.css" />
-    <entry file="file://$PROJECT_DIR$/public/assets/backend/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/backend/plugins/email-decode/email-decode.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -680,13 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_11_13_180830_create_sub_categories_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_11_10_084914_create_categories_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -705,13 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="94" column="85" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/sidebar_menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -735,17 +706,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sub_category.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/sub_category/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/sub_category/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="132" selection-end-column="22" />
+        <state relative-caret-position="448">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>
@@ -756,27 +720,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="776" column="20" selection-start-line="776" selection-start-column="20" selection-end-line="776" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_11_13_180830_create_sub_categories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_11_14_072159_create_product_images_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/partials/sidebar_menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="92" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sub_category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_11_14_071207_create_products_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Sub_categoryCntrller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="190" column="44" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
+        <state relative-caret-position="279">
+          <caret line="32" column="79" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="32" selection-end-column="79" />
           <folding>
             <element signature="e#48#84#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/sub_category/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/product/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/product/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="107">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="34" column="87" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="87" />
+        <state relative-caret-position="428">
+          <caret line="54" column="93" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/sub_category/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="48" column="49" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="48" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <element signature="e#48#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/pages/product/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#122#609#0#HTML" />
+            <element signature="e#1172#1516#0#HTML" />
+            <element signature="e#1474#1815#0#HTML" />
+            <element signature="e#1848#2195#0#HTML" />
+            <element signature="e#2228#2583#0#HTML" />
+            <element signature="e#5155#5508#0#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>

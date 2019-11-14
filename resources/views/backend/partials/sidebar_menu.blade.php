@@ -22,6 +22,9 @@
                 <li>
                     <a href="{{route('admin.brand.index')}}"><i class="la la-codepen"></i> <span>Brand</span></a>
                 </li>
+                <li>
+                    <a href="{{route('admin.product.index')}}"><i class="la la-archive"></i> <span>Product</span></a>
+                </li>
 
 
 
